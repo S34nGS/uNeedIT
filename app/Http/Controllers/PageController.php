@@ -6,32 +6,26 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function showHomePage() {
-        $title = "Home";
-        return view('home', compact('title'));
+        return view('home');
     }
 
     public function showOverOnsPage() {
-        $title = "Over ons";
-        return view('overOns', compact('title'));
+        return view('overOns');
     }
 
     public function showServicePage() {
-        $title = "Service";
-        return view('service', compact('title'));
+        return view('service');
     }
 
     public function showZakelijkPage() {
-        $title = "Zakelijk";
-        return view('zakelijk', compact('title'));
+        return view('zakelijk');
     }
 
     public function showFaqPage() {
-        $title = "FAQ";
-        return view('faq', compact('title'));
+        return view('faq');
     }
 
     public function showBezorgdienstenPage() {
-        $title = "Bezorgdiensten";
-        return view('bezorgdiensten', compact('title'));
+        return view('bezorgdiensten');
     }
 }

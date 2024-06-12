@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot:title>
+        Over ons
+    </x-slot:title>
     <div class="red-text" >
         <p > Over Ons</p>
     </div>

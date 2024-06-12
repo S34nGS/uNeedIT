@@ -1,4 +1,7 @@
 <x-guest-layout>
+    <x-slot:title>
+        Reset password
+    </x-slot:title>
     <form method="POST" action="{{ route('password.store') }}">
         @csrf
 

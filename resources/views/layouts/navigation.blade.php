@@ -11,49 +11,36 @@
                 </div>
 
                 <!-- Navigation Links -->
-                @auth
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('overOns')" :active="request()->routeIs('overOns')">
+                        {{ __('Over ons') }}
                     </x-nav-link>
-                </div>
-                @endauth
+                </nav>
 
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('test')" :active="request()->routeIs('test')">
-                        {{ __('test') }}
+                    <x-nav-link :href="route('service')" :active="request()->routeIs('service')">
+                        {{ __('Service') }}
+                    </x-nav-link>
+                </nav>
+
+                <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('zakelijk')" :active="request()->routeIs('zakelijk')">
+                        {{ __('Zakelijk') }}
+                    </x-nav-link>
+                </nav>
+
+                <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('faq')" :active="request()->routeIs('faq')">
+                        {{ __('FAQ') }}
+                    </x-nav-link>
+                </nav>
+
+                <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('bezorgdiensten')" :active="request()->routeIs('bezorgdiensten')">
+                        {{ __('Bezorgdiensten') }}
                     </x-nav-link>
                 </nav>
             </div>
-
-            {{-- @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
-                                @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Dashboard
-                                    </a>
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Log in
-                                    </a>
-
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        >
-                                            Register
-                                        </a>
-                                    @endif
-                                @endauth
-                            </nav>
-            @endif --}}
 
             @auth
             <!-- Settings Dropdown -->
@@ -122,11 +109,11 @@
     @auth
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
+        {{-- <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-        </div>
+        </div> --}}
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">

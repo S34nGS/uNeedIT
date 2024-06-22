@@ -12,31 +12,31 @@
 
                 <!-- Navigation Links -->
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('overOns')" :active="request()->routeIs('overOns')">
+                    <x-nav-link :href="route('overOns')" :active="request()->routeIs('overOns')" style="color: rgb(228, 21, 21);">
                         {{ __('Over ons') }}
                     </x-nav-link>
                 </nav>
 
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('service')" :active="request()->routeIs('service')">
+                    <x-nav-link :href="route('service')" :active="request()->routeIs('service')" style="color: rgb(21, 159, 228);">
                         {{ __('Service') }}
                     </x-nav-link>
                 </nav>
 
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('zakelijk')" :active="request()->routeIs('zakelijk')">
+                    <x-nav-link :href="route('zakelijk')" :active="request()->routeIs('zakelijk')" style="color: rgb(228, 21, 21);">
                         {{ __('Zakelijk') }}
                     </x-nav-link>
                 </nav>
 
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('faq')" :active="request()->routeIs('faq')">
+                    <x-nav-link :href="route('faq')" :active="request()->routeIs('faq')" style="color: rgb(21, 159, 228);">
                         {{ __('FAQ') }}
                     </x-nav-link>
                 </nav>
 
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('bezorgdiensten')" :active="request()->routeIs('bezorgdiensten')">
+                    <x-nav-link :href="route('bezorgdiensten')" :active="request()->routeIs('bezorgdiensten')" style="color: rgb(228, 21, 21);">
                         {{ __('Bezorgdiensten') }}
                     </x-nav-link>
                 </nav>
@@ -89,7 +89,7 @@
             @endauth
             @guest
             <nav class="-mx-3 my-3 flex flex-1 justify-end">
-                <a
+                {{-- <a
                     href="{{ route('login') }}"
                     class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                 >
@@ -100,7 +100,13 @@
                     class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                 >
                     Register
-                </a>
+                </a> --}}
+                <x-authorization-button href="{{ route('login') }}" class="ms-3">
+                    Log in
+                </x-authorization-button>
+                <x-authorization-button href="{{ route('register') }}" class="ms-4">
+                    Register
+                </x-authorization-button>
             </nav>
             @endguest
         </div>

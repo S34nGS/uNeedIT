@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PageController::class, 'showHomePage'])->name('home');
 Route::get('/over-ons', [PageController::class, 'showOverOnsPage'])->name('overOns');
 Route::get('/service', [PageController::class, 'showServicePage'])->name('service');
-Route::get('/zakelijk', [PageController::class, 'showZakelijkPage'])->name('zakelijk');
+Route::get('/aanvraag', [PageController::class, 'showAanvraagPage'])->name('aanvraag');
 Route::get('/faq', [PageController::class, 'showFaqPage'])->name('faq');
 Route::get('/bezorgdiensten', [PageController::class, 'showBezorgdienstenPage'])->name('bezorgdiensten');
 

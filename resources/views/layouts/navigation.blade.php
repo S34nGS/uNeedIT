@@ -12,31 +12,31 @@
 
                 <!-- Navigation Links -->
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('overOns')" :active="request()->routeIs('overOns')" style="color: rgb(228, 21, 21);">
+                    <x-nav-link :href="route('overOns')" :active="request()->routeIs('overOns')" class="font-sans text-lg font-bold" style="color: #c12e2a;">
                         {{ __('Over ons') }}
                     </x-nav-link>
                 </nav>
 
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('service')" :active="request()->routeIs('service')" style="color: rgb(21, 159, 228);">
+                    <x-nav-link :href="route('service')" :active="request()->routeIs('service')" style="color: #00adbd;">
                         {{ __('Service') }}
                     </x-nav-link>
                 </nav>
 
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('zakelijk')" :active="request()->routeIs('zakelijk')" style="color: rgb(228, 21, 21);">
-                        {{ __('Zakelijk') }}
+                    <x-nav-link :href="route('aanvraag')" :active="request()->routeIs('aanvraag')" style="color: #c12e2a;">
+                        {{ __('Aanvraag') }}
                     </x-nav-link>
                 </nav>
 
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('faq')" :active="request()->routeIs('faq')" style="color: rgb(21, 159, 228);">
+                    <x-nav-link :href="route('faq')" :active="request()->routeIs('faq')" style="color: #00adbd;">
                         {{ __('FAQ') }}
                     </x-nav-link>
                 </nav>
 
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('bezorgdiensten')" :active="request()->routeIs('bezorgdiensten')" style="color: rgb(228, 21, 21);">
+                    <x-nav-link :href="route('bezorgdiensten')" :active="request()->routeIs('bezorgdiensten')" style="color: #c12e2a;">
                         {{ __('Bezorgdiensten') }}
                     </x-nav-link>
                 </nav>

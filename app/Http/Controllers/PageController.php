@@ -17,8 +17,8 @@ class PageController extends Controller
         return view('service');
     }
 
-    public function showZakelijkPage() {
-        return view('zakelijk');
+    public function showAanvraagPage() {
+        return view('aanvraag');
     }
 
     public function showFaqPage() {

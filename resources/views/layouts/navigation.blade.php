@@ -12,31 +12,31 @@
 
                 <!-- Navigation Links -->
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('overOns')" :active="request()->routeIs('overOns')" class="font-sans text-lg font-bold" style="color: #c12e2a;">
+                    <x-nav-link :href="route('overOns')" :active="request()->routeIs('overOns')" style="color: #c12e2a; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;">
                         {{ __('Over ons') }}
                     </x-nav-link>
                 </nav>
 
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('service')" :active="request()->routeIs('service')" style="color: #00adbd;">
+                    <x-nav-link :href="route('service')" :active="request()->routeIs('service')" style="color: #00adbd; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;">
                         {{ __('Service') }}
                     </x-nav-link>
                 </nav>
 
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('aanvraag')" :active="request()->routeIs('aanvraag')" style="color: #c12e2a;">
+                    <x-nav-link :href="route('aanvraag')" :active="request()->routeIs('aanvraag')" style="color: #c12e2a; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;">
                         {{ __('Aanvraag') }}
                     </x-nav-link>
                 </nav>
 
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('faq')" :active="request()->routeIs('faq')" style="color: #00adbd;">
+                    <x-nav-link :href="route('faq')" :active="request()->routeIs('faq')" style="color: #00adbd; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;">
                         {{ __('FAQ') }}
                     </x-nav-link>
                 </nav>
 
                 <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('bezorgdiensten')" :active="request()->routeIs('bezorgdiensten')" style="color: #c12e2a;">
+                    <x-nav-link :href="route('bezorgdiensten')" :active="request()->routeIs('bezorgdiensten')" style="color: #c12e2a; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;">
                         {{ __('Bezorgdiensten') }}
                     </x-nav-link>
                 </nav>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 // })->middleware(['auth', 'verified'])->name('test');
@@ -12,6 +13,10 @@ Route::get('/service', [PageController::class, 'showServicePage'])->name('servic
 Route::get('/aanvraag', [PageController::class, 'showAanvraagPage'])->name('aanvraag');
 Route::get('/faq', [PageController::class, 'showFaqPage'])->name('faq');
 Route::get('/bezorgdiensten', [PageController::class, 'showBezorgdienstenPage'])->name('bezorgdiensten');
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

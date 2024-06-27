@@ -13,6 +13,8 @@ class CreateContactFormsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->text('message');
+            $table->string('option');
+            $table->string('modelNumber');
             $table->timestamps();
         });
     }

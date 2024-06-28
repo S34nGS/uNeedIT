@@ -2,7 +2,19 @@
     <x-slot:title>
         Bezorgdiensten
     </x-slot:title>
-    <div>
+
+    <div class="flex justify-center">
+        <div class="grid grid-cols-2 grid-rows-3 gap-4">
+            <div class="flex justify-center"><img src="{{ asset('images/UPS-Logo.png') }}" class="h-40"></div>
+            <div >2</div>
+            <div class="flex justify-center"><img src="{{ asset('images/DHL-Logo.png') }}" class="h-40"></div>
+            <div >4</div>
+            <div class="flex justify-center"><img src="{{ asset('images/homerr_logo.png') }}" class="h-40"></div>
+            <div >6</div>
+        </div>
+    </div>
+    
+    {{-- <div>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
             <h2 class="text-2xl font-bold text-gray-900">Collections</h2>
@@ -44,5 +56,5 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
 </x-app-layout>

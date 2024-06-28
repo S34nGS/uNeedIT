@@ -27,4 +27,8 @@ class PageController extends Controller
     public function showBezorgdienstenPage() {
         return view('bezorgdiensten');
     }
+
+    public function showReadAanvraagPage() {
+        return view('readAanvraag');
+    }
 }

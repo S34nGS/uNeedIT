@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AanvraagController;
 use Illuminate\Support\Facades\Route;
 
 // })->middleware(['auth', 'verified'])->name('test');
@@ -19,6 +20,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+    Route::get('/aanvragen', [AanvraagController::class, 'show'])->name('aanvragen');
+    Route::delete('/aanvragen/{id}', [AanvraagController::class, 'destroy'])->name('aanvragen.destroy');
+    Route::get('/aanvragen/{id}/edit', [AanvraagController::class, 'edit'])->name('aanvragen.edit');
+    Route::put('/aanvragen/{id}', [AanvraagController::class, 'update'])->name('aanvragen.update');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

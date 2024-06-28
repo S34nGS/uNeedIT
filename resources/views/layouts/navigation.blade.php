@@ -40,6 +40,14 @@
                         {{ __('Bezorgdiensten') }}
                     </x-nav-link>
                 </nav>
+
+                @auth
+                    <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link :href="route('aanvragen')" :active="request()->routeIs('aanvragen')" style="color: #00adbd; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;">
+                            {{ __('Aanvragen inzien') }}
+                        </x-nav-link>
+                    </nav>
+                @endauth
             </div>
 
             @auth

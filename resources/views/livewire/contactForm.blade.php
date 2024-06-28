@@ -6,6 +6,7 @@
   @endif
 
   <form wire:submit.prevent="submit" class="w-full max-w-lg">
+    <h1 class="text-2xl font-bold mb-4 text-white">Aanvraag formulier</h1>
       @csrf
       <div class="flex flex-wrap -mx-3 mb-4">
 

@@ -40,7 +40,7 @@ class AppointmentController extends Controller
 
           Appointment::create($appointmentData);
 
-          return redirect()->route('home')->with('success','Appointment created successfully.');
+          return back()->with('success', 'Appointment created successfully.');
     }
 
     /**
@@ -56,36 +56,29 @@ class AppointmentController extends Controller
      */
     public function edit(string $id)
     {
+        $appointment = Appointment::findOrFail($id);
         return view('appointment.edit', compact('appointment'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Appointment $appointment)
+    public function update(Request $request, string $id)
     {
-        // Validate the input
-        $request->validate([
+        $appointment = Appointment::findOrFail($id);
+    
+        $validatedData = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'date' => 'required|date',
-            'option' => 'required',
+            'brand' => 'required',
             'modelNumber' => 'required',
+            'date' => 'required|date_format:Y-m-d H:i',
             'message' => 'required',
         ]);
-
-        // Update the note's title and content; encryption is handled by the model
-        $appointment->update([
-            'name' => $request->input('required'),
-            'email' => $request->input('required|email'),
-            'date' => $request->input('required|date'),
-            'option' => $request->input('required'),
-            'modelNumber' => $request->input('required'),
-            'message' => $request->input('required'),
-        ]);
-
-        return redirect()->route('appointment.index')
-            ->with('success', 'Appointment updated successfully.');
+    
+        $appointment->update($validatedData);
+    
+        return redirect()->route('appointment.index')->with('success', 'Appointment updated successfully.');
     }
 
     /**

@@ -1,0 +1,1 @@
+<img src="{{ asset('images/cropped-logo UNEED-IT(notext).png') }}"  alt="Application Logo" class="w-32 h-auto">

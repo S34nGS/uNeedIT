@@ -4,6 +4,9 @@
     </x-slot:title>
     <div class="container mx-auto p-6">
         <h1 class="text-2xl font-bold mb-4 text-white">Openstaande afspraken</h1>
+        {{-- @if($appointments->isEmpty())
+            <p>{{ $noAppointmentsMessage }}</p>
+        @else --}}
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
             <table class="min-w-full bg-white">
                 <thead>
@@ -42,5 +45,6 @@
                 </tbody>
             </table>
         </div>
+        {{-- @endif --}}
     </div>
 </x-app-layout>

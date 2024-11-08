@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Appointment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AppointmentController extends Controller
 {
@@ -12,7 +13,15 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        $appointments = Appointment::all();
+        $user = Auth::user();
+        if ($user->role === 'admin') {
+            $appointments = Appointment::all();
+        } else {
+            $appointments = Appointment::where('user_id', $user->id)->get();
+            if ($appointments->isEmpty()) {
+                return view('appointment.index', ['appointments' => $appointments, 'message' => 'Geen gemaakte afspraken']);
+            }
+        }
         return view('appointment.index', compact('appointments'));
     }
 
@@ -29,18 +38,30 @@ class AppointmentController extends Controller
      */
     public function store(Request $request)
     {
-        $appointmentData = $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'brand' => 'required',
-            'modelNumber' => 'required',
-            'date' => 'required|date_format:Y-m-d H:i',
-            'message' => 'required',
-          ]);
+        // $appointmentData = $request->validate([
+        //     'name' => 'required',
+        //     'email' => 'required|email',
+        //     'brand' => 'required',
+        //     'modelNumber' => 'required',
+        //     'date' => 'required|date_format:Y-m-d H:i',
+        //     'message' => 'required',
+        //   ]);
 
-          Appointment::create($appointmentData);
+        //   Appointment::create($appointmentData);
 
-          return back()->with('success', 'Appointment created successfully.');
+        //   return back()->with('success', 'Appointment created successfully.');
+
+          Appointment::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'brand' => $request->brand,
+            'modelNumber' => $request->modelNumber,
+            'date' => $request->date,
+            'message' => $request->message,
+            'user_id' => Auth::check() ? Auth::id() : null
+        ]);
+    
+        return back()->with('success', 'Appointment created successfully.');
     }
 
     /**

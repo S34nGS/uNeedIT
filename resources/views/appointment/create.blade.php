@@ -3,43 +3,39 @@
         Aanvraag doen
     </x-slot:title>
 
-    <form method="POST" action="{{ route('appointment.store') }}" class="max-w-lg mx-auto">
+    <form method="POST" action="{{ route('appointment.store') }}" class="max-w-lg mx-auto mt-5">
         @csrf
         <h1 class="text-2xl font-bold mb-4 text-white">Afspraak maken</h1>
 
-        <div class="flex flex-wrap mb-4">
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Naam</label>
-                <input type="text" name="name" id="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required placeholder="John" />
-            </div>
-
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                <input type="email" name="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required placeholder="example@uneedit.nl" />
-            </div>
+        <div>
+            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Naam</label>
+            <input type="text" name="name" id="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required placeholder="John" />
         </div>
 
-        <div class="mb-5">
-            <div>
-                <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Merk</label>
-                <select name="brand" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
-                    <option value=""></option>
-                    <option value="Apple">Apple</option>
-                    <option value="Microsoft">Microsoft</option>
-                    <option value="HP">HP</option>
-                    <option value="Dell">Dell</option>
-                    <option value="Acer">Acer</option>
-                    <option value="Asus">Asus</option>
-                    <option value="Lenovo">Lenovo</option>
-                    <option value="MSI">MSI</option>
-                    <option value="Samsung">Samsung</option>
-                </select>
-            </div>
+        <div>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+            <input type="email" name="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required placeholder="example@uneedit.nl" />
+        </div>
 
-            <div>
-                <label for="modelNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Modelnummer</label>
-                <input type="text" name="modelNumber" id="modelNumber" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
-            </div>
+        <div>
+            <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Merk</label>
+            <select name="brand" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                <option value=""></option>
+                <option value="Apple">Apple</option>
+                <option value="Microsoft">Microsoft</option>
+                <option value="HP">HP</option>
+                <option value="Dell">Dell</option>
+                <option value="Acer">Acer</option>
+                <option value="Asus">Asus</option>
+                <option value="Lenovo">Lenovo</option>
+                <option value="MSI">MSI</option>
+                <option value="Samsung">Samsung</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="modelNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Modelnummer</label>
+            <input type="text" name="modelNumber" id="modelNumber" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
         </div>
 
         <div class="mb-5">

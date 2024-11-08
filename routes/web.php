@@ -13,7 +13,9 @@ Route::get('/aanvraag', [PageController::class, 'showAanvraagPage'])->name('aanv
 Route::get('/faq', [PageController::class, 'showFaqPage'])->name('faq');
 Route::get('/bezorgdiensten', [PageController::class, 'showBezorgdienstenPage'])->name('bezorgdiensten');
 
-Route::get('/appointments', [AppointmentController::class, 'index'])->name('appointment.index');
+Route::get('/appointments', [AppointmentController::class, 'index'])
+    ->middleware('auth')
+    ->name('appointment.index');
 Route::get('/appointments/create', [AppointmentController::class, 'create'])->name('appointment.create');
 Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointment.store');
 Route::get('/appointments/{appointment}', [AppointmentController::class, 'show'])->name('appointment.show');

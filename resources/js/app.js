@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", async function () {
         const bookedDates = await response.json();
 
         flatpickr("#appointment_date", {
+            minDate: "today",
+            minTime: "08:00",
+            maxTime: "18:00",
             enableTime: true,
             dateFormat: "Y-m-d H:i",
             disable: bookedDates,

@@ -19,18 +19,18 @@
                 </div>
                 <div class="flex flex-col items-center text-white">
                     <img src="{{ asset('images/icons/phone.svg') }}" class="w-32 h-auto fill-red-500">
-                    <span class="mt-2">Telefoon</span>
+                    <span class="mt-2">Contact</span>
                     <div class="text-base">
                         <p>SERVICENUMMER: +31 6 30 985 409 </p>
                         <p>KANTOOR: +31 18 28 202 18 </p>
-                        <p>(BEREIKBAAR VAN 09:00-18:00)</p>
+                        <p>EMAIL: info@uneedit.com</p>
                     </div>
                 </div>
                 <div class="flex flex-col items-center text-white">
                     <img src="{{ asset('images/icons/clock.svg') }}" class="w-32 h-auto">
                     <span class="mt-2">Openingstijden</span>
                     <div class="text-base">
-                        <p>MA T/M VRIJ, 09:00 - 23:00</p>
+                        <p>MA T/M VRIJ, 10:00 - 17:30</p>
                         <p>TELEFONISCH BEREIKBAAR</p>
                         <p>VOOR ABONNEMENTHOUDERS</p>
                     </div>

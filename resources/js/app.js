@@ -16,11 +16,16 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         flatpickr("#appointment_date", {
             minDate: "today",
-            minTime: "08:00",
-            maxTime: "18:00",
+            minTime: "10:00",
+            maxTime: "17:00",
             enableTime: true,
             dateFormat: "Y-m-d H:i",
-            disable: bookedDates,
+            disable: [
+                ...bookedDates,  // Disable booked dates
+                function(date) {  // Disable weekends (Saturday and Sunday)
+                    return (date.getDay() === 0 || date.getDay() === 6); // Disable Sundays (0) and Saturdays (6)
+                }
+            ]
         });
     } catch (error) {
         console.error("Error fetching booked dates:", error);

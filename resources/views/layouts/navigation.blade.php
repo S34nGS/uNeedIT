@@ -41,9 +41,15 @@
                     </x-nav-link>
                 </nav>
 
+                <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link style="color: #00adbd; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;">
+                        Webshop
+                    </x-nav-link>
+                </nav>
+
                 @auth
                     <nav class="space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link :href="route('appointment.index')" :active="request()->routeIs('aanvragen')" style="color: #00adbd; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;">
+                        <x-nav-link :href="route('appointment.index')" :active="request()->routeIs('aanvragen')" style="color: #c12e2a; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;">
                             {{ __('Aanvragen inzien') }}
                         </x-nav-link>
                     </nav>
